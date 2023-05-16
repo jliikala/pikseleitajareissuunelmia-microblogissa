@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/hyde.css" | relURL }}">
   <link rel="stylesheet" href="{{ "custom.css" | relURL }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7cAbril+Fatface">
 
     {{ if .RSSLink -}}
       <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -46,4 +46,10 @@
 	<link rel="microsub" href="https://micro.blog/microsub" />
 	<link rel="webmention" href="https://micro.blog/webmention" />
 	<link rel="subscribe" href="https://micro.blog/users/follow" />
+	{{ range .Site.Params.plugins_css }}
+		<link rel="stylesheet" href="{{ . }}" />
+	{{ end }}
+	{{ range $filename := .Site.Params.plugins_html }}
+		{{ partial $filename $ }}
+	{{ end }}
 </head>
