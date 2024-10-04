@@ -1,2 +1,7 @@
 {
+  "params": {
+    "description": "Erään devaajan blogi.",
+    "languageCode": "fi-FI",
+    "defaultContentLanguage": "fi"
+  }
 }
