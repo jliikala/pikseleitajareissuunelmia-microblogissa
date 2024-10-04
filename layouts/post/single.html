@@ -3,7 +3,7 @@
   {{ if .Title }}
     <h1 class="page-title p-name">{{ .Title }}</h1>
   {{ end }}
-  <a href="{{ .Permalink }}" class="post-date u-url"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "2. January 2006" | time.Format "2006-01-02 15:04:05 -0700" }}</time></a>
+  <a href="{{ .Permalink }}" class="post-date u-url"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date | time.Format "2.1.2006" }}</time></a>
   <div class="e-content">
   {{ .Content }}
   </div>
