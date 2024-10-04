@@ -77,3 +77,7 @@
 h1, h2, h3 {
   font-family: "Cartridge","Open Sans", Helvetica, Arial, sans-serif;
 }
+
+.page-title a {
+  color: #303030;
+}
