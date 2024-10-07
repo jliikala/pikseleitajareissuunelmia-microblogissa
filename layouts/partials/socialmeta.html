@@ -32,7 +32,9 @@
 {{ end }}
 
 {{ with .Params.photos }}
-  {{ $firstPhoto := first 1 . }}
-  <meta name="twitter:image" content="{{ index $firstPhoto 0 }}">
-  <meta property="og:image" content="{{ index $firstPhoto 0 }}">
+  {{ if gt (len .) 0 }}
+    {{ $firstPhoto := index (first 1 .) 0 }}
+    <meta name="twitter:image" content="{{ $firstPhoto }}">
+    <meta property="og:image" content="{{ $firstPhoto }}">
+  {{ end }}
 {{ end }}
