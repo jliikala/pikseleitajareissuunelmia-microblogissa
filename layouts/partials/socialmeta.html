@@ -1,5 +1,5 @@
-{{ $slug := .File.BaseFileName }} <!-- Get the current page slug -->
-{{ $cover := index site.Data.covers $slug }} <!-- Lookup the cover in covers.yml -->
+{{ $slug := .File.BaseFileName }} <!-- Sivun slug -->
+{{ $cover := index site.Data.somemeta $slug }} <!-- Etsi somejakokuva slugin perusteella somemetasta -->
 
 {{ with .Title }}
 <meta name="twitter:title" content="{{ . }}">
